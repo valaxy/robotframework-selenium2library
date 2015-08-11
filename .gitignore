@@ -1,12 +1,13 @@
 .project
 .pydevproject
-test/
+.idea
+test/results
 *.pyc
 *.orig
 MANIFEST
-doc/*.html
-
+*.egg-info
+*.egg
+chromedriver.log
 
 dist
 build
-src
