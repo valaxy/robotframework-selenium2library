@@ -177,6 +177,10 @@ class _BrowserManagementKeywords(KeywordGroup):
         self._debug("Created %s WebDriver instance with session id %s" % (driver_name, driver.session_id))
         return self._cache.register(driver, alias)
 
+    def use_appium_webdriver(self):
+        from AppiumLibrary.keywords import _ApplicationManagementKeywords
+        return self._cache.register(_ApplicationManagementKeywords._last_application, None)
+
     def switch_browser(self, index_or_alias):
         """Switches between active browsers using index or alias.
 
